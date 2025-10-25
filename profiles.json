@@ -1,0 +1,56 @@
+{
+  "default": {
+    "as7341": { "integration_time_ms": 100, "gain": 4 },
+    "camera": { "args": [] },
+    "cal_file": "cal/default_cal.json",
+    "indices": {
+      "ripe_if": {
+        "y_over_g": { ">=": 1.10 },
+        "r_over_g": { "<=": 2.20 }
+      },
+      "unripe_if": {
+        "y_over_g": { "<": 1.00 },
+        "r_over_g": { ">": 2.80 }
+      }
+    }
+  },
+
+  "apple": {
+    "as7341": { "integration_time_ms": 100, "gain": 4 },
+    "camera": { "args": [] },
+    "cal_file": "cal/apple_cal.json",
+    "indices": {
+      "ripe_if": {
+        "nir_over_red": { ">=": 0.95 },
+        "green_drop":   { "<=": 0.22 }
+      },
+      "unripe_if": {
+        "nir_over_red": { "<": 0.85 },
+        "green_drop":   { ">": 0.28 }
+      }
+    }
+  },
+
+  "green apple": {
+    "as7341": { "integration_time_ms": 100, "gain": 4 },
+    "camera": { "args": [] },
+    "cal_file": "cal/apple_cal.json",
+    "indices": {
+      "ripe_if": {
+        "nir_over_red": { ">=": 0.95 },
+        "green_drop":   { "<=": 0.22 }
+      },
+      "unripe_if": {
+        "nir_over_red": { "<": 0.85 },
+        "green_drop":   { ">": 0.28 }
+      }
+    }
+  },
+
+  "unknown": {
+    "as7341": { "integration_time_ms": 100, "gain": 4 },
+    "camera": { "args": [] },
+    "cal_file": "cal/default_cal.json",
+    "indices": {}
+  }
+}
